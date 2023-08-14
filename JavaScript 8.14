@@ -1,0 +1,23 @@
+一些微小的关于JAVAscript的感悟。
+首先需要换行符；
+在 JavaScript 中，document.writeln 和 alert 是两个不同的函数，它们用于不同的目的，有一些区别。
+
+document.writeln：
+document.writeln 是用于向文档（网页）中写入内容的函数。
+它将提供的内容作为参数，并将其作为一行文本插入到当前文档中。
+如果在文档加载完成后调用 document.writeln，它会覆盖整个文档内容，包括 HTML 和其他已存在的内容。
+这个方法通常在特定场景下使用，比如在页面加载过程中动态地生成内容。
+示例：
+javascript
+Copy code
+document.writeln("Hello, World!");
+alert：
+alert 是一个用于显示警告框（弹窗）的函数，通常用于向用户显示一些信息或提示。
+它接受一个字符串作为参数，然后在浏览器中弹出一个包含该字符串的对话框。
+alert 会暂停页面上的其他操作，直到用户关闭弹窗。
+这个方法通常用于调试或在特定情况下向用户提供通知。
+示例：
+
+javascript
+Copy code
+alert("Hello, World!");
