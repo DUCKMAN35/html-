@@ -74,4 +74,58 @@ body{
 </div>
 </html>
 
- 
+ <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid brown;
+            padding: 8px;
+            text-align: center;
+            width: 25%;
+        }
+        th {
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>X</th>
+            <th>X^2</th>
+            <th>1/x</th>
+            <th>x^1/2</th>
+        </tr>
+        <!-- 使用 JavaScript 生成表格行 -->
+        <script>
+            var table = document.querySelector('table'); // 获取表格元素
+            for (var i = 1; i <= 5; i++) {
+                var row = document.createElement('tr'); // 创建<tr>元素
+                var cell1 = document.createElement('td');
+                var cell2 = document.createElement('td');
+                var cell3 = document.createElement('td');
+                var cell4 = document.createElement('td');
+                
+                cell1.textContent = i;
+                cell2.textContent = i * i;
+                cell3.textContent = (1 / i).toFixed(2);
+                cell4.textContent = Math.sqrt(i).toFixed(2);
+                
+                row.appendChild(cell1);
+                row.appendChild(cell2);
+                row.appendChild(cell3);
+                row.appendChild(cell4);
+                
+                table.appendChild(row); // 将<tr>添加到表格中
+            }
+        </script>
+    </table>
+</body>
+</html>
